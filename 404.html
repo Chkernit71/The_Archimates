@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page introuvable (404) | The Archi Mates</title>
+    <meta name="description" content="La page que vous recherchez est introuvable. Retrouvez l'ensemble des programmes et ressources The Archi Mates." />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .error-hero {
+        min-height: calc(100vh - 180px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 0;
+        text-align: center;
+      }
+      .error-card {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 48px 32px;
+        max-width: 720px;
+        margin: 0 auto;
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
+      }
+      .error-code {
+        font-size: clamp(4rem, 10vw, 7rem);
+        font-weight: 900;
+        letter-spacing: -0.05em;
+        line-height: 1;
+        background: linear-gradient(135deg, #ffffff 30%, var(--accent) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 12px;
+      }
+      .error-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        justify-content: center;
+        margin-top: 32px;
+      }
+      .helpful-links {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        margin-top: 40px;
+        text-align: left;
+      }
+      .helpful-link-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 18px 20px;
+        text-decoration: none;
+        color: var(--text);
+        transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      }
+      .helpful-link-card:hover {
+        transform: translateY(-2px);
+        border-color: var(--accent);
+        background: rgba(142, 197, 255, 0.08);
+      }
+      .helpful-link-card strong {
+        display: block;
+        font-size: 0.95rem;
+        margin-bottom: 4px;
+      }
+      .helpful-link-card span {
+        font-size: 0.82rem;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a href="/" class="brand" aria-label="The Archi Mates">
+          <img src="assets/logo-white-cropped.png" alt="The Archi Mates" class="brand-logo" />
+        </a>
+
+        <nav class="main-nav" aria-label="Navigation principale">
+          <a href="/">Accueil</a>
+          <a href="/#programmes">Programmes</a>
+          <a href="/pro/">Formations Pro</a>
+          <a href="/#missions">Mission</a>
+          <a href="/#resultats">Résultats</a>
+          <a href="https://www.instagram.com/the.archimates" target="_blank" rel="noreferrer">Instagram</a>
+        </nav>
+
+        <a href="https://www.instagram.com/the.archimates" target="_blank" rel="noreferrer" class="button button-primary">Instagram</a>
+      </div>
+    </header>
+
+    <main class="error-hero">
+      <div class="container">
+        <div class="error-card">
+          <div class="error-code">404</div>
+          <p class="eyebrow" style="margin-bottom: 8px;">Page introuvable</p>
+          <h2>Oups, cette page semble avoir disparu dans les plans</h2>
+          <p class="subtitle" style="margin: 12px auto 0; font-size: 1rem;">
+            L'adresse demandée n'existe pas ou a été déplacée. Retrouvez votre chemin vers nos programmes et formations d'architecture.
+          </p>
+
+          <div class="error-actions">
+            <a href="/" class="button button-primary">Retour à l’accueil</a>
+            <a href="/pro/" class="button button-secondary">Formations Pro</a>
+            <a href="/#programmes" class="button button-secondary">Programmes Concours</a>
+          </div>
+
+          <div class="helpful-links">
+            <a href="/#programmes" class="helpful-link-card">
+              <strong>Préparation Concours</strong>
+              <span>SAPD, ENA, INAU & 2BAC</span>
+            </a>
+            <a href="/pro/" class="helpful-link-card">
+              <strong>Formations Pro & BIM</strong>
+              <span>ArchiCAD, Revit & Marchés</span>
+            </a>
+            <a href="/#missions" class="helpful-link-card">
+              <strong>Notre Mission</strong>
+              <span>Méthode & accompagnement</span>
+            </a>
+            <a href="https://www.instagram.com/the.archimates" target="_blank" rel="noreferrer" class="helpful-link-card">
+              <strong>Rejoindre la communauté</strong>
+              <span>+17.9k followers sur Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div>
+          <a href="/" class="brand footer-brand" aria-label="The Archi Mates">
+            <img src="assets/logo-white-cropped.png" alt="The Archi Mates" class="brand-logo" />
+          </a>
+        </div>
+
+        <div class="footer-links">
+          <a href="/">Accueil</a>
+          <a href="/#programmes">Programmes</a>
+          <a href="/pro/">Formations Pro</a>
+          <a href="/#processus">Processus</a>
+          <a href="/#missions">Mission</a>
+          <a href="/#resultats">Résultats</a>
+          <a href="https://www.instagram.com/the.archimates" target="_blank" rel="noreferrer">Instagram</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
