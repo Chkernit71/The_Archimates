@@ -1,18 +1,32 @@
-const tabs = document.querySelectorAll('.tab');
-const panels = document.querySelectorAll('.profile-panel');
+const tabs = document.querySelectorAll('.audience-tab');
+const panels = document.querySelectorAll('.program-grid');
 
-for (const tab of tabs) {
+tabs.forEach((tab) => {
   tab.addEventListener('click', () => {
-    const profile = tab.dataset.profile;
-
+    const target = tab.dataset.audience;
     tabs.forEach((item) => {
-      const isActive = item === tab;
-      item.classList.toggle('active', isActive);
-      item.setAttribute('aria-selected', String(isActive));
+      const selected = item === tab;
+      item.classList.toggle('active', selected);
+      item.setAttribute('aria-selected', String(selected));
     });
-
     panels.forEach((panel) => {
-      panel.classList.toggle('active', panel.dataset.panel === profile);
+      const selected = panel.id === target;
+      panel.hidden = !selected;
+      panel.classList.toggle('active', selected);
     });
   });
+});
+
+const menuButton = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav-links');
+if (menuButton && nav) {
+  menuButton.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    menuButton.setAttribute('aria-expanded', String(open));
+  });
+
+  nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    menuButton.setAttribute('aria-expanded', 'false');
+  }));
 }
